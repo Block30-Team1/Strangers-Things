@@ -9,7 +9,7 @@ function App() {
     <div id="container">
      <h1> Stranger's Things </h1>
       <div id="navbar">
-        <Link classname="nav-item" to="/Home"> Home </Link>
+        <Link classname="nav-item" to="/"> Home </Link>
         <Link classname="nav-item" to="/Posts"> Posts </Link>
         <Link classname="nav-item" to="/Login"> Login </Link>
       </div>
