@@ -1,4 +1,7 @@
 import { useState } from 'react'
+import Home from './Components/Home'
+import Posts from './Components/Posts';
+import Login from './Components/Login';
 import {Routes, Route, Link } from 'react-router-dom';
 import './App.css'
 
