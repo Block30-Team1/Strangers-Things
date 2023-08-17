@@ -67,3 +67,16 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.allPostsWrapper {
+  font-size: 20px;
+  text-align: left;
+}
+
+.single-message{
+  background-color: rgb(59, 35, 75);
+  color: white;
+  border: solid black;
+  height: 400px;
+  width: 600px;
+}
