@@ -4,6 +4,7 @@ import Posts from './Components/Posts';
 import Login from './Components/Login';
 import Register from './Components/Register';
 import NavBar from './Components/NavBar';
+import CreatePost from './Components/CreatePost';
 import {Routes, Route, Link } from 'react-router-dom';
 import './App.css'
 
@@ -27,6 +28,7 @@ function App() {
           <Route path='/posts' element={<Posts/>} />
           <Route path='/login' element={<Login/>} />
           <Route path ='/register' element={<Register/>} />
+          <Route path='/CreatePost' element={<CreatePost/>} />
         </Routes>
       </div>
       </div>
