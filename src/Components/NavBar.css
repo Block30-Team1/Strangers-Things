@@ -1,0 +1,29 @@
+.NavBar {
+    background-color: aquamarine;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+
+}
+a {
+    text-decoration: none;
+}
+li{
+    list-style-type: none;
+}
+.NavBar .title {
+    font-size: 22px;
+    text-transform: uppercase;
+    color: #3941d7aa;
+}
+.NavBar .nav-link ul {
+    display: flex;
+    justify-content: space-around;
+}
+.nav-link {
+    display: flex;
+}
+.container{
+    display: flex;
+}

@@ -3,6 +3,7 @@ import Home from './Components/Home'
 import Posts from './Components/Posts';
 import Login from './Components/Login';
 import Register from './Components/Register';
+import NavBar from './Components/NavBar';
 import {Routes, Route, Link } from 'react-router-dom';
 import './App.css'
 
@@ -10,12 +11,13 @@ function App() {
 
   return (
     <>
+    <NavBar/>
     <div id="container">
-     <h1> Stranger's Things </h1>
+    <h1> Stranger's Things </h1>
       <div id="navbar">
-        <Link classname="nav-item" to="/"> Home </Link>
-        <Link classname="nav-item" to="/posts"> Posts </Link>
-        <Link classname="nav-item" to="/login"> Login </Link>
+        <Link className="nav-item" to="/"> Home </Link>
+        <Link className="nav-item" to="/posts"> Posts </Link>
+        <Link className="nav-item" to="/login"> Login </Link>
         <Link className='nav-item' to = '/register'> Register </Link>
       </div>
 
@@ -27,7 +29,7 @@ function App() {
           <Route path ='/register' element={<Register/>} />
         </Routes>
       </div>
-     </div>
+      </div>
     </>
   )
 }
