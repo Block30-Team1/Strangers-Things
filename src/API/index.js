@@ -18,7 +18,7 @@ export default async function deletePlayer() {
 
         const response = await fetch(`${BASE_URL}/posts/POST_ID`, {
 
-            method: "Delete",
+            method: "DELETE",
             headers: {
                 'Content-Type': 'application/json',
                 'Authorization': `Bearer ${TOKEN_STRING_HERE}`
