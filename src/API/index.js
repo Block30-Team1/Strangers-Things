@@ -9,3 +9,22 @@ export const fetchAllPosts = async () => {
     return result.data.posts;
 
 }
+
+export const registerUrl = async (registerUser) => {
+    const response = await fetch(`${BASE_URL}/users/register`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}` //token
+        },
+        body: JSON.stringify({
+            user: {
+                username: registerUser.username,
+                password: registerUser.password
+
+            }
+        })
+    });
+    const result = await response.json();
+    return result;
+}

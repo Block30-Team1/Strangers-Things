@@ -13,18 +13,18 @@ function App() {
     <div id="container">
      <h1> Stranger's Things </h1>
       <div id="navbar">
-        <Link classname="nav-item" to="/"> Home </Link>
-        <Link classname="nav-item" to="/posts"> Posts </Link>
-        <Link classname="nav-item" to="/login"> Login </Link>
-        <Link className='nav-item' to = '/register'> Register </Link>
+        <Link className="nav-item" to="/"> Home </Link>
+        <Link className="nav-item" to="/Posts"> Posts </Link>
+        <Link className="nav-item" to="/Login"> Login </Link>
+        <Link className="nav-item" to="/Register"> Register </Link>
       </div>
 
       <div>
         <Routes>
           <Route Path='/' element={<Home/>} />
-          <Route path='/posts' element={<Posts/>} />
-          <Route path='/login' element={<Login/>} />
-          <Route path ='/register' element={<Register/>} />
+          <Route path='/Posts' element={<Posts/>} />
+          <Route path='/Register' element={<Register/>} />
+          <Route path='/Login' element={<Login/>} />
         </Routes>
       </div>
      </div>
