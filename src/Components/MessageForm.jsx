@@ -2,6 +2,7 @@ import { useState } from "react";
 
 export default function MessageForm() {
   const [firstname, setFirstName] = useState("");
+  const [lastname, setLastName] = useState("");
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -11,7 +12,7 @@ export default function MessageForm() {
     <>
       <form onSubmit={handleSubmit}>
         <label>
-          Firstname: 
+          Firstname:
           <input
             value={firstname}
             onChange={(e) => {
@@ -20,10 +21,16 @@ export default function MessageForm() {
           />
         </label>
         <label>
-            Lastname: 
+          Lastname:
+          <input
+            value={lastname}
+            onChange={(e) => {
+              setLastName(e.target.value);
+            }}
+          />
         </label>
-        
-        <button type = "submit">Submit Message</button>
+
+        <button type="submit">Submit Message</button>
       </form>
     </>
   );
