@@ -55,18 +55,18 @@ export const login = async (username, password) => {
 
 export const authorization = async (token) => {
 
-    if (token){
-          const response = await fetch(`${BASE_URL}/someEndPoint`, {
+    if (token) {
+        const response = await fetch(`${BASE_URL}/someEndPoint`, {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json',
                 'Authorization': `Bearer ${token}`
             },
             body: JSON.stringify({ /* whatever things you need to send to the API */ })
-          });
-            const result = await response.json();
-            console.log(result);
-            return result
+        });
+        const result = await response.json();
+        console.log(result);
+        return result
     } else {
         const response = await fetch(`${BASE_URL}/someEndPoint`, {
             method: "POST",
@@ -74,7 +74,7 @@ export const authorization = async (token) => {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({ /* whatever things you need to send to the API */ })
-          });
+        });
     }
 }
 

@@ -33,6 +33,7 @@ export default function Posts(){
                 <p> Title: {obj.title}</p>
                 <p> Description: {obj.description}</p>
                 <p>Price: {obj.price}</p>
+                <button className='Delete'>Delete</button>
                 <h4 className='location'>{obj.location}</h4>
             </div>
         );
