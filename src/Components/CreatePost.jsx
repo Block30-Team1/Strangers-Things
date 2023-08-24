@@ -43,34 +43,34 @@ export default function CreatePost ({setToken}){
     
         <form onSubmit={handleSubmit}>
             <h2>Create Post</h2>
-            <label htmlFor="title">Title</label>
+            <label className="postLabels" htmlFor="title">Title</label>
             <input type="text"
                     id="title"
                     value={title}
                     onChange={(e) => setTitle(e.target.value)}
             />
-            <label htmlFor="description">Description:</label> 
+            <label className="postLabels" htmlFor="description">Description:</label> 
             <input
             type="text"
             id="description"
             value={description}
             onChange={(e)=> setDescription(e.target.value)}
             />
-            <label htmlFor="price">Price:</label>
+            <label className="postLabels" htmlFor="price">Price:</label>
             <input
             type="text"
             id="price"
             value={price}
             onChange={(e) => setPrice(e.target.value)}
             />
-            <label htmlFor="location">location:</label>
+            <label className="postLabels" htmlFor="location">location:</label>
             <input
             type="text"
             id="location"
             value={location}
             onChange={(e) => setLocation(e.target.value)}
             />
-            <label htmlFor="willDeliver">Will Deliver?</label>
+            <label className="postLabels" htmlFor="willDeliver">Will Deliver?</label>
             <input
             type="checkbox"
             value={willDeliver}

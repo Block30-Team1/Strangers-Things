@@ -48,7 +48,7 @@ export const loggingIn = async (username,password) => {
 
     const result = await response.json();
     return result;
-
+}
 
 export default async function deletePlayer() {
 
@@ -68,4 +68,16 @@ export default async function deletePlayer() {
     } catch (err) {
         console.error('This is a delete error'.err);
     }
+}
+
+const myData = async () => {
+    const response = await fetch(`${BASE_URL}/users/me`, {
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${TOKEN_STRING_HERE}`
+        },
+    });
+    const result = await response.json();
+    console.log(result);
+    return result;
 }

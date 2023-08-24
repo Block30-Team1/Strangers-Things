@@ -3,7 +3,7 @@ form {
     flex-direction: column;
     padding: 30px;
 }
-label {
+.postLabel {
     text-align: left;
 }
 input [type=checkbox]{
