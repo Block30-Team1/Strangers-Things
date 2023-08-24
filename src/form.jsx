@@ -27,7 +27,7 @@ Form needs to contain:
 //login
 /*
 
-After regisstering, another FORM to login and logout
+After registering, another FORM to login and logout
 - 
 
 */

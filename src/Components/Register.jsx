@@ -5,32 +5,26 @@ export default function Register() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
-    const [result, setRegister] = useState({});
-    async function handleSubmit(e) {
+    const [result, setRegister] = useState('');
+
+    async function handleSubmit(e, data) {
         e.preventDefault();
         try{
-            const result = await registerUrl();
+            const result = await registerUrl(username, password);
             setRegister(result);
-        console.log({ username, password, confirmPassword })
+        console.log(result);
+        console.log("hi" + username, password);
         
         }catch (error) {
             console.error(error);
+            console.log(result);
+            console.log({username, password});
         }
         setUsername("");
+        setPassword("");
+        setConfirmPassword("");
 
     }
-
-    async function passwordVerification () {
-
-
-    if (confirmPassword === password){
-        console.log("Results match!");
-    } else {
-        alert("Passwords don't match");
-        return false;
-    }
-}
-
 
     
     return <form method="post" onSubmit={handleSubmit}>
@@ -43,12 +37,12 @@ export default function Register() {
         <hr />
         <label>
         <input value={password} onChange={(e) => setPassword(e.target.value)} required
-        placeholder=" Password *" maxLenght="8" minLength="6"/>
+        placeholder=" Password *" maxLength="8" minLength="6"/>
         </label>
         <hr />
         <label>
         <input value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} required
-        placeholder=" Confirm your password *" maxLenght="8" minLength="6" />
+        placeholder=" Confirm your password *" maxLength="8" minLength="6" />
         </label>
         <hr />
         <label>
