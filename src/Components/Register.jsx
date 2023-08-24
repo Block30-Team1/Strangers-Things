@@ -17,7 +17,6 @@ export default function Register() {
         
         }catch (error) {
             console.error(error);
-            console.log(result);
             console.log({username, password});
         }
         setUsername("");

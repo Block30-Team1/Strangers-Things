@@ -1,4 +1,4 @@
-import { loggingIn, registerUrl } from '../API/index';
+import { loggingIn } from '../API/index';
 import { useState } from 'react';
 
 export default function Login() {
@@ -20,7 +20,6 @@ export default function Login() {
         }
         setUsername("");
         setPassword("");
-        setConfirmPassword("");
     }
 
     return <form method="post" onSubmit={handleSubmit}>
