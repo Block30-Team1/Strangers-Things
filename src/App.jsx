@@ -14,10 +14,10 @@ function App() {
     <div id="container">
     <h1> Stranger's Things </h1>
       <div id="navbar">
-        <Link classname="nav-item" to="/"> Home </Link>
-        <Link classname="nav-item" to="/posts"> Posts </Link>
-        <Link classname="nav-item" to="/login"> Login </Link>
-        <Link className='nav-item' to = '/register'> Register </Link>
+        <Link className="nav-item" to="/"> Home </Link>
+        <Link className="nav-item" to="/Posts"> Posts </Link>
+        <Link className="nav-item" to="/Login"> Login </Link>
+        <Link className="nav-item" to="/Register"> Register </Link>
         <Link className='nav-items' to= '/CreatePost'>Create Post</Link>
       </div>
 
