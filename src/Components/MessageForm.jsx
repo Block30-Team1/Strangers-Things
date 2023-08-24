@@ -3,6 +3,7 @@ import { useState } from "react";
 export default function MessageForm() {
   const [firstname, setFirstName] = useState("");
   const [lastname, setLastName] = useState("");
+  const [message, setMessage] = useState("");
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -26,6 +27,15 @@ export default function MessageForm() {
             value={lastname}
             onChange={(e) => {
               setLastName(e.target.value);
+            }}
+          />
+        </label>
+        <label>
+          Your Message:
+          <input
+            value={message}
+            onChange={(e) => {
+              setMessage(e.target.value);
             }}
           />
         </label>
