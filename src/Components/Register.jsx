@@ -48,5 +48,3 @@ export default function Register() {
         <button type="submit"> Register </button>
         </label>
     </form>
-
-}

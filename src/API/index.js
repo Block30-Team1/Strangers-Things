@@ -3,6 +3,7 @@ const COHORT_NAME = `2302-acc-ct-web-pt-a`;
 const BASE_URL = `https://strangers-things.herokuapp.com/api/${COHORT_NAME}`;
 const token = 'eyJfaWQiOiI1ZTg5MDY2ZGQ0MzkxNjAwTc1NTNlMDUiLCJ1c2VybmFtZSI6Im1hdHQiLCJpYXQiOjE1ODYwMzgzODF9';
 
+
 export const fetchAllPosts = async () => {
 
     const response = await fetch(`${BASE_URL}/posts`);
@@ -24,13 +25,6 @@ export const registerUrl = async (username, password) => {
                 username: username,
                 password: password,
             }
-
-           /*
-           user: {
-                username: "cacacacaccccc",
-                password: "kkkkkkkkkk"
-           }
-           */
         })
     });
     const result = await response.json();
@@ -54,4 +48,24 @@ export const loggingIn = async (username,password) => {
 
     const result = await response.json();
     return result;
+
+
+export default async function deletePlayer() {
+
+    try {
+
+        const response = await fetch(`${BASE_URL}/posts/POST_ID`, {
+
+            method: "DELETE",
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${TOKEN_STRING_HERE}`
+            }
+        });
+
+        const result = await response.json();
+        return result
+    } catch (err) {
+        console.error('This is a delete error'.err);
+    }
 }
