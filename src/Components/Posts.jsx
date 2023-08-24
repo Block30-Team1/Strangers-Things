@@ -22,6 +22,7 @@ export default function Posts(){
     
     return (
         <div className='allPostsWrapper'>
+            <h3 id='component-h3'> Posts </h3>
         {posts.map((obj) => {
         return (
         <div key={obj.id} className='single-message' >

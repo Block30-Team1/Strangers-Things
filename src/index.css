@@ -1,38 +1,36 @@
-:root {
+body {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
+  color: black;
+  background-color: rgb(250, 250, 244);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+  margin: 0;
+  align-items: center;
+  width: 100%;
+}
+
+#root{ /* removes random white space border around all pages */
+  margin: 0px;
+  padding: 0px;
+  max-width: 100%;
 }
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: inherit;
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  color: #d1d3f8;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: top;
-  min-width: 320px;
-  min-height: 100vh;
-}
 
 h1 {
-  font-size: 3.2em;
   line-height: 1.1;
 }
 
@@ -43,9 +41,10 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: white;
   cursor: pointer;
   transition: border-color 0.25s;
+  border: solid rgb(192, 192, 192) 1px;
 }
 button:hover {
   border-color: #646cff;
@@ -61,7 +60,7 @@ button:focus-visible {
     background-color: #ffffff;
   }
   a:hover {
-    color: #747bff;
+    color: #d1d3f8;
   }
   button {
     background-color: #f9f9f9;
@@ -74,9 +73,51 @@ button:focus-visible {
 }
 
 .single-message{
-  background-color: rgb(59, 35, 75);
-  color: white;
-  border: solid black;
+  background-color:rgb(244, 247, 246);
+  color: black;
+  border: solid rgb(239, 228, 228);
   height: 400px;
   width: 600px;
+  margin: 0 auto;
+}
+
+#navbar{
+
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 10vh;
+  background-color: rgb(45, 74, 98);
+  padding: 0px 0px 0px 150px;
+  align-items: center;
+  
+}
+
+#navbar-link-section{
+  
+  display: inline-block;
+  text-align: left;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 0px 250px 0px 0px;
+}
+
+#component-h3{
+  font-size: 3.2em;
+  text-align: center;
+}
+
+h1{
+  font-size: 1.5em;
+  color: white;
+  font-weight: 400;
+}
+
+.reg-log-input{
+  height: 35px;
+  width: 250px;
+  margin: 10px 0px 0px 0px;
+  border: solid rgb(192, 192, 192);
+  border-radius: 5px;
 }

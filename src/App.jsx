@@ -11,14 +11,15 @@ function App() {
 
   return (
     <>
-    <div id="container">
+    <div id="navbar">
     <h1> Stranger's Things </h1>
-      <div id="navbar">
+      <div id="navbar-link-section">
         <Link className="nav-item" to="/"> Home </Link>
         <Link className="nav-item" to="/Posts"> Posts </Link>
         <Link className="nav-item" to="/Login"> Login </Link>
         <Link className="nav-item" to="/Register"> Register </Link>
-        <Link className='nav-items' to= '/CreatePost'>Create Post</Link>
+        <Link className='nav-items' to= '/CreatePost'>Create</Link>
+        </div>
       </div>
 
       <div>
@@ -29,7 +30,6 @@ function App() {
           <Route path ='/register' element={<Register/>} />
           <Route path='/CreatePost' element={<CreatePost/>}/>
         </Routes>
-      </div>
       </div>
     </>
   )
