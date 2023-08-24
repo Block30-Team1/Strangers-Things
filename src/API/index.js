@@ -1,7 +1,7 @@
 
 const COHORT_NAME = `2302-acc-ct-web-pt-a`;
 const BASE_URL = `https://strangers-things.herokuapp.com/api/${COHORT_NAME}`;
-const TOKEN_STRING_HERE = //'Add Token Here' //
+
 
 export const fetchAllPosts = async () => {
 
