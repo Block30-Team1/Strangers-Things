@@ -1,7 +1,9 @@
 import { registerUrl } from '../API/index';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export default function Register() {
+    const navigate = useNavigate();
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
@@ -35,17 +37,17 @@ export default function Register() {
         </label>
         <hr />
         <label>
-        <input value={password} onChange={(e) => setPassword(e.target.value)} required
+        <input value={password} type="password" onChange={(e) => setPassword(e.target.value)} required
         placeholder=" Password *" maxLength="8" minLength="6"/>
         </label>
         <hr />
         <label>
-        <input value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} required
+        <input value={confirmPassword} type="password" onChange={(e) => setConfirmPassword(e.target.value)} required
         placeholder=" Confirm your password *" maxLength="8" minLength="6" />
         </label>
         <hr />
         <label>
-        <button type="submit"> Register </button>
+        <button type="submit" onClick={() => navigate(`/Login`)}> Register </button>
         </label>
     </form>
 }

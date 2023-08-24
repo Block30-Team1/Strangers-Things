@@ -32,7 +32,7 @@ export const registerUrl = async (username, password) => {
     return result;
 }
 
-export const loggingIn = async (username,password) => {
+export const login = async (username, password) => {
     const response = await fetch(`${BASE_URL}/users/login`, {
         method: "POST",
         headers: {
@@ -41,14 +41,43 @@ export const loggingIn = async (username,password) => {
         body: JSON.stringify({
             user: {
                 username: username,
-                password: password
+                password: password,
             }
         })
     });
 
     const result = await response.json();
+    console.log(result);
+
     return result;
+
 }
+
+export const authorization = async (token) => {
+
+    if (token){
+          const response = await fetch(`${BASE_URL}/someEndPoint`, {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
+            },
+            body: JSON.stringify({ /* whatever things you need to send to the API */ })
+          });
+            const result = await response.json();
+            console.log(result);
+            return result
+    } else {
+        const response = await fetch(`${BASE_URL}/someEndPoint`, {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ /* whatever things you need to send to the API */ })
+          });
+    }
+}
+
 
 export default async function deletePlayer() {
 
@@ -70,11 +99,11 @@ export default async function deletePlayer() {
     }
 }
 
-const myData = async () => {
+export const myData = async () => {
     const response = await fetch(`${BASE_URL}/users/me`, {
         headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${TOKEN_STRING_HERE}`
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${TOKEN_STRING_HERE}`
         },
     });
     const result = await response.json();
