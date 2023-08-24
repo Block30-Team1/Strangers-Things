@@ -57,7 +57,7 @@ export default function Login() {
 
 
     return (<form method="post" onSubmit={handleSubmit}>
-        <h3> Login </h3>
+        <h3 id="component-h3"> Login </h3>
         <label>
             <input value={username} onChange={(e) => setUsername(e.target.value)} required
                 placeholder=" Username *" />
