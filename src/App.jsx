@@ -18,7 +18,7 @@ function App() {
         <Link className="nav-item" to="/Posts"> Posts </Link>
         <Link className="nav-item" to="/Login"> Login </Link>
         <Link className="nav-item" to="/Register"> Register </Link>
-        <Link className='nav-items' to= '/CreatePost'>Create Post</Link>
+        <Link className='nav-items' to= '/CreatePost'>Create</Link>
         </div>
       </div>
 

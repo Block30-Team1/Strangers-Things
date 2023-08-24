@@ -57,20 +57,18 @@ export default function Login() {
 
 
     return (<form method="post" onSubmit={handleSubmit}>
-        <h3 id="component-h3"> Login </h3>
+        <h3 id="component-h3"> Log In </h3>
         <label>
-            <input value={username} onChange={(e) => setUsername(e.target.value)} required
+            <input className='reg-log-input' value={username} onChange={(e) => setUsername(e.target.value)} required
                 placeholder=" Username *" />
         </label>
-        <hr />
         <label>
-            <input value={password} type="password" onChange={(e) => setPassword(e.target.value)} required
+            <input className='reg-log-input' value={password} type="password" required onChange={(e) => setPassword(e.target.value)} 
                 placeholder=" Password *" maxLength="8" minLength="6" />
         </label>
-        <hr />
         <div>
             <p>
-                Don't have an account? Sign Up.
+                Don't have an account? <span  onClick={() => navigate(`/Register`)} >Sign Up.</span>
             </p>
         </div>
         <label>

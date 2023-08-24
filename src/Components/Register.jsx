@@ -32,17 +32,17 @@ export default function Register() {
 
         <h3 id="component-h3"> Register </h3>
         <label>
-        <input value={username} onChange={(e) => setUsername(e.target.value)} required 
+        <input className='reg-log-input'value={username} onChange={(e) => setUsername(e.target.value)} required 
         placeholder=" Username *"/>
         </label>
         <hr />
         <label>
-        <input value={password} type="password" onChange={(e) => setPassword(e.target.value)} required
+        <input className='reg-log-input' value={password} type="password" onChange={(e) => setPassword(e.target.value)} required
         placeholder=" Password *" maxLength="8" minLength="6"/>
         </label>
         <hr />
         <label>
-        <input value={confirmPassword} type="password" onChange={(e) => setConfirmPassword(e.target.value)} required
+        <input className='reg-log-input' value={confirmPassword} type="password" onChange={(e) => setConfirmPassword(e.target.value)} required
         placeholder=" Confirm your password *" maxLength="8" minLength="6" />
         </label>
         <hr />
